@@ -1,18 +1,20 @@
 package com.jalasoft.testing.pages;
 
-/**
- * Created by Igor Santa Cruz on 5/26/2016.
- */
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * Created by Igor Santa Cruz on 5/26/2016.
+ */
+
 public class WebDriverManager {
 
     private static WebDriverManager instance;
+
+    private static final int TIMEOUT_NORMAL = 15;
 
     private WebDriver driver;
 
@@ -20,8 +22,8 @@ public class WebDriverManager {
 
     private WebDriverManager() {
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver, 15);
+        driver.manage().timeouts().implicitlyWait(TIMEOUT_NORMAL, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, TIMEOUT_NORMAL);
     }
 
     public static WebDriverManager getInstance() {

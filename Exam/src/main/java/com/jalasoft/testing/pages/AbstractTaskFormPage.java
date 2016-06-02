@@ -12,7 +12,7 @@ public abstract class AbstractTaskFormPage extends AbstractBasePage {
     @FindBy(xpath = "//div[@class='richtext_editor sel_richtext_editor']")
     protected WebElement taskNameTextField;
 
-    @FindBy(css = ".form_icon_holder > .cmp_priority4")
+    @FindBy(css=".form_icon_holder > img[class^='cmp_priority']")
     protected WebElement defaultPriorityIcon;
 
     @FindBy(css = ".td_submit > .amibutton_red")

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
  */
 public class Login extends AbstractBasePage {
 
-    public static final String URL_TODOIST = "https://todoist.com/Users/showLogin";
+    private static final String URL_TODOIST = "https://todoist.com/Users/showLogin";
 
     @FindBy(id = "email")
     private WebElement emailTextField;

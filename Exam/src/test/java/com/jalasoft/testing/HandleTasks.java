@@ -1,5 +1,9 @@
 package com.jalasoft.testing;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 import com.jalasoft.testing.pages.ConfirmDialog;
 import com.jalasoft.testing.pages.Login;
 import com.jalasoft.testing.pages.MainContainer;
@@ -9,9 +13,6 @@ import com.jalasoft.testing.pages.QuickTaskDialog;
 import com.jalasoft.testing.pages.TaskContextMenu;
 import com.jalasoft.testing.pages.TopBar;
 import com.jalasoft.testing.pages.TopSection;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -39,8 +40,8 @@ public class HandleTasks {
 
     @Test
     public void testCreateInboxTask() {
-        String expectedInboxTaskName = "Task1";
-        int expectedInboxTaskPriority = 2;
+        final String expectedInboxTaskName = "Task1";
+        final int expectedInboxTaskPriority = 2;
 
         TopSection topSection = mainContainer.goToTopSection();
         pageContent = topSection.goToInbox();
@@ -56,9 +57,9 @@ public class HandleTasks {
 
     @Test
     public void testCreateQuickTask() {
-        String expectedQuickTaskName = "Task2";
-        int expectedQuickTaskPriority = 1;
-        String expectedQuickTaskProject = "Trabajo";
+        final String expectedQuickTaskName = "Task2";
+        final int expectedQuickTaskPriority = 1;
+        final String expectedQuickTaskProject = "Trabajo";
 
         TopBar topBar = mainContainer.goToTopBar();
         QuickTaskDialog  addQuickTaskDialog = topBar.clickAddQuickTask();
