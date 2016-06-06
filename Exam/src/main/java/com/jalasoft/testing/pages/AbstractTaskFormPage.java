@@ -12,7 +12,7 @@ public abstract class AbstractTaskFormPage extends AbstractBasePage {
     @FindBy(xpath = "//div[@class='richtext_editor sel_richtext_editor']")
     protected WebElement taskNameTextField;
 
-    @FindBy(css=".form_icon_holder > img[class^='cmp_priority']")
+    @FindBy(css = ".form_icon_holder > img[class^='cmp_priority']")
     protected WebElement defaultPriorityIcon;
 
     @FindBy(css = ".td_submit > .amibutton_red")
@@ -21,7 +21,7 @@ public abstract class AbstractTaskFormPage extends AbstractBasePage {
 
     public void setTaskNameTextField(String taskName) {
         wait.until(ExpectedConditions.visibilityOf(taskNameTextField));
-        FormFunctions.fillTextBox(taskNameTextField,taskName);
+        FormFunctions.fillTextBox(taskNameTextField, taskName);
     }
 
     public void selectPriorityForCurrentTask(String priority) {

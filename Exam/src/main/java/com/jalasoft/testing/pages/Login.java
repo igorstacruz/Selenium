@@ -26,12 +26,12 @@ public class Login extends AbstractBasePage {
 
     public void setEmailTextField(String username) {
         wait.until(ExpectedConditions.visibilityOf(emailTextField));
-        FormFunctions.fillTextBox(emailTextField,username);
+        FormFunctions.fillTextBox(emailTextField, username);
     }
 
     public void setPasswordTextField(String password) {
         wait.until(ExpectedConditions.visibilityOf(passwordTextField));
-        FormFunctions.fillTextBox(passwordTextField,password);
+        FormFunctions.fillTextBox(passwordTextField, password);
     }
 
     public void clickLoginButton() {

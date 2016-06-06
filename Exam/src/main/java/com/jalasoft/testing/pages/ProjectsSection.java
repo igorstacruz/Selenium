@@ -13,7 +13,7 @@ public class ProjectsSection extends AbstractBasePage {
     private WebElement projectsMenu;
 
     public PageContent goToProject(String project) {
-        projectsMenu.findElement(By.xpath(".//li/table/tbody/tr/td/span[contains(.,'"+ project +"')]")).click();
+        projectsMenu.findElement(By.xpath(".//li/table/tbody/tr/td/span[contains(.,'" + project + "')]")).click();
         return new PageContent();
     }
 }

@@ -25,7 +25,7 @@ public class QuickTaskDialog extends AbstractTaskFormPage {
         System.out.println("Number of Projects on Select: " + listProjects.size());
         Boolean projectFound = false;
         for (WebElement currentProject : listProjects) {
-            if (currentProject.getText().equals(project)){
+            if (currentProject.getText().equals(project)) {
                 System.out.println("the Project: " + project + " was found: ");
                 projectFound = true;
                 currentProject.click();

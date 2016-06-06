@@ -12,10 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverManager {
 
-    private static WebDriverManager instance;
-
     private static final int TIMEOUT_NORMAL = 15;
-
+    private static WebDriverManager instance;
     private WebDriver driver;
 
     private WebDriverWait wait;

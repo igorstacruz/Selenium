@@ -14,11 +14,11 @@ public class ConfirmDialog extends AbstractBasePage {
     @FindBy(css = "div > .amibutton.amibutton_red")
     private WebElement okButton;
 
-    public ConfirmDialog(){
+    public ConfirmDialog() {
         wait.until(ExpectedConditions.visibilityOf(alertFrame));
     }
 
-    public  void clickOK() {
+    public void clickOK() {
         wait.until(ExpectedConditions.elementToBeClickable(okButton));
         okButton.click();
     }
